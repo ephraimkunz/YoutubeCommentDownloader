@@ -203,23 +203,19 @@ async fn get_playlist_items(
             .doit()
             .await?;
 
-        for item in playlist_items.items.unwrap() {
-            let video_id = item
+        for item in playlist_items.items.unwrap_or_default() {
+            let Some(video_id) = item
                 .content_details
-                .as_ref()
-                .unwrap()
-                .video_id
-                .as_ref()
-                .unwrap()
-                .clone();
-            let title = item
+                .as_ref().and_then(|cd| cd.video_id.as_ref()).cloned() else {
+                    continue;
+            };
+
+            let Some(title) = item
                 .snippet
-                .as_ref()
-                .unwrap()
-                .title
-                .as_ref()
-                .unwrap()
-                .clone();
+                .as_ref().and_then(|s| s.title.as_ref()).cloned() else {
+                    continue;
+            };
+
             items.push(PlaylistItem { title, video_id })
         }
 
