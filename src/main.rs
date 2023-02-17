@@ -20,15 +20,15 @@ struct Cli {
     channel_handle: String,
 
     /// Name of the file that will be used to cache the oauth token.
-    #[arg(default_value = "tokencache.json")]
+    #[arg(short, long, default_value = "tokencache.json")]
     token_cache_name: String,
 
     /// Name of the file where client secret can be read from. This file should contain the JSON downloaded from the Credentials section of the Google Cloud console.
-    #[arg(default_value = "client_secret.json")]
+    #[arg(short, long, default_value = "client_secret.json")]
     client_secret_name: String,
 
     /// Name of the file where comment JSON will be dumped.
-    #[arg(default_value = "comments.json")]
+    #[arg(short, long, default_value = "comments.json")]
     output_name: String,
 }
 
