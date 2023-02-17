@@ -88,9 +88,8 @@ async fn main() -> Result<()> {
     let playlist_items = get_playlist_items(&upload_playlist_id, &youtube).await?;
 
     let mut videos: Vec<Video> = Vec::with_capacity(playlist_items.len());
-    let progress_style = ProgressStyle::with_template(
-        "[elapsed:{elapsed}] [remaining:{eta}] {bar:50} {pos}/{len}",
-    )?;
+    let progress_style =
+        ProgressStyle::with_template("[elapsed:{elapsed}] [remaining:{eta}] {bar:50} {pos}/{len}")?;
     for playlist_item in playlist_items.iter().progress_with_style(progress_style) {
         let video = Video {
             title: playlist_item.title.clone(),
