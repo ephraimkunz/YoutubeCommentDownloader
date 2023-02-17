@@ -30,3 +30,55 @@ Options:
   -V, --version
           Print version
 ```
+
+## Output Format
+```json
+[
+  {
+    "title": "Knowledge From Facts OR Experience? (Saber & Conocer)",
+    "id": "C6D_tFJeLWk",
+    "comments": [
+      {
+        "text": "Reminds me of Elder Bednar’s talk where he discusses Testimony va conversion.",
+        "author_name": "Zion Mama",
+        "children": []
+      },
+      {
+        "text": "so it's theroretically and experimental",
+        "author_name": "space fan",
+        "children": [
+          {
+            "text": "That is the process, not the end. Knowledge is gained through experience and experiment.",
+            "author_name": "Cwic Media"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "The Most Precious Things In Life",
+    "id": "0cTXYmmazQ8",
+    "comments": [
+      {
+        "text": "\"When facts come secondary to emotion, truth dies. A society that doesn't value truth cannot survive.\" - Ben Shapiro",
+        "author_name": "CoffeeDrinkingIsNotASin",
+        "children": [
+          {
+            "text": "@Chischili Snez Objective Truth is what exists and can be proved in this physicality. ...\n\nNormative Truth is what we, as a group, agree is true. ...\n\nSubjective Truth is how the individual sees or experiences the world.",
+            "author_name": "CoffeeDrinkingIsNotASin"
+          },
+          {
+            "text": "As Pilate said to Jesus, \"What is truth?\"",
+            "author_name": "Chischili Snez"
+          }
+        ]
+      },
+      {
+        "text": "Exactly, lots of factors play into how we know something.",
+        "author_name": "Joscelyn Pease",
+        "children": []
+      }
+    ]
+  }
+]
+```
