@@ -120,7 +120,7 @@ async fn create_youtube_client(
     .persist_tokens_to_disk(token_cache_name)
     .build()
     .await
-    .expect("Unable to build authenticator");
+    .context("Unable to build authenticator")?;
 
     let scopes = &[
         "https://www.googleapis.com/auth/youtube.force-ssl",
